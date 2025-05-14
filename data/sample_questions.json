@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Explain the concept of inheritance in object-oriented programming.",
+      "model_answer": "Inheritance is a fundamental concept in object-oriented programming that allows a class to inherit properties and methods from another class. The class that inherits is called the subclass or derived class, and the class being inherited from is called the superclass or base class. This promotes code reusability and establishes a relationship between classes, enabling the creation of hierarchical class structures. Through inheritance, subclasses can extend or override functionality of the superclass, implementing the concept of polymorphism.",
+      "max_score": 10
+    },
+    {
+      "id": 2,
+      "question": "Describe the importance of preprocessing in machine learning pipelines.",
+      "model_answer": "Preprocessing is a critical step in machine learning pipelines that involves transforming raw data into a suitable format for modeling. It includes tasks such as data cleaning, handling missing values, normalization, feature scaling, encoding categorical variables, and feature selection. Proper preprocessing leads to better model performance by reducing noise, removing irrelevant information, and ensuring that the data meets the assumptions of the chosen algorithm. It also helps in addressing issues like class imbalance, outliers, and dimensionality reduction, ultimately improving the generalization capability of the model and preventing potential biases in the results.",
+      "max_score": 10
+    },
+    {
+      "id": 3,
+      "question": "Explain the working principle of neural networks.",
+      "model_answer": "Neural networks are computational models inspired by the human brain's structure and function. They consist of interconnected nodes (neurons) organized in layers - typically an input layer, one or more hidden layers, and an output layer. Each connection between neurons has a weight that adjusts during learning. The network processes data by taking inputs, applying weights, passing the weighted sum through an activation function, and propagating the results forward through subsequent layers. The learning process involves adjusting these weights through backpropagation by comparing outputs with expected results and minimizing the error using optimization algorithms like gradient descent. This allows neural networks to learn complex patterns and relationships in data, making them effective for tasks like classification, regression, and pattern recognition.",
+      "max_score": 10
+    },
+    {
+      "id": 4,
+      "question": "Discuss the ethical considerations in artificial intelligence.",
+      "model_answer": "Ethical considerations in artificial intelligence encompass multiple dimensions including bias and fairness, transparency and explainability, privacy and data protection, accountability, and socioeconomic impact. AI systems can perpetuate or amplify existing biases if trained on biased data, leading to unfair outcomes for certain groups. The black-box nature of complex models raises concerns about transparency, making it difficult to understand how decisions are made. AI systems often require vast amounts of personal data, raising privacy concerns about data collection, storage, and usage. The question of accountability arises when determining responsibility for AI decisions, especially in high-stakes areas like healthcare or autonomous vehicles. Additionally, AI automation may lead to job displacement and economic inequality if not managed properly. Addressing these ethical concerns requires collaborative efforts from researchers, policymakers, and industry through robust governance frameworks, technical solutions for fairness and explainability, and inclusive approaches to AI development and deployment.",
+      "max_score": 10
+    },
+    {
+      "id": 5,
+      "question": "Explain the concept of Big O notation in algorithm complexity analysis.",
+      "model_answer": "Big O notation is a mathematical notation used in computer science to describe the performance or complexity of an algorithm, particularly the worst-case scenario. It characterizes the upper bound of an algorithm's time or space requirements relative to the input size. The notation O(f(n)) represents the growth rate of the algorithm's resource usage, where f(n) is a function of the input size n. Common complexities include O(1) for constant time operations, O(log n) for logarithmic algorithms like binary search, O(n) for linear algorithms that process each input element once, O(n log n) for efficient sorting algorithms like merge sort, O(n²) for quadratic algorithms like bubble sort, and O(2^n) for exponential algorithms like brute-force solutions to the traveling salesman problem. Big O notation helps developers compare algorithms, predict performance at scale, and make informed decisions about algorithm selection based on efficiency requirements and constraints.",
+      "max_score": 10
+    }
+  ]
+}
