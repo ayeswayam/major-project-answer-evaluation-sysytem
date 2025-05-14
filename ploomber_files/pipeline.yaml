@@ -1,0 +1,95 @@
+"""
+Pipeline configuration for the Theoretical Answer Evaluation System.
+This file defines the tasks and their dependencies for the Ploomber pipeline.
+"""
+
+# Product tasks are functions that produce outputs
+# Each task can depend on other tasks' outputs
+tasks:
+  # Data preparation tasks
+  - source: preprocessing/prepare_data.py
+    product:
+      nb: products/notebooks/prepare_data.ipynb
+      data: products/data/processed_data.pkl
+    name: prepare_data
+    # No upstream dependencies as this is the first task
+  
+  # Model training task
+  - source: models/train_model.py
+    product:
+      nb: products/notebooks/train_model.ipynb
+      model: products/models/answer_evaluation_model.pkl
+    name: train_model
+    upstream:
+      - prepare_data
+    # This task depends on the prepare_data task
+  
+  # Feature extraction task
+  - source: preprocessing/extract_features.py
+    product:
+      nb: products/notebooks/extract_features.ipynb
+      features: products/data/features.pkl
+    name: extract_features
+    upstream:
+      - prepare_data
+    # This task depends on the prepare_data task
+  
+  # Model evaluation task
+  - source: evaluation/evaluate_model.py
+    product:
+      nb: products/notebooks/evaluate_model.ipynb
+      report: products/reports/model_evaluation.html
+      metrics: products/reports/metrics.json
+    name: evaluate_model
+    upstream:
+      - train_model
+      - extract_features
+    # This task depends on both train_model and extract_features tasks
+  
+  # Generate feedback examples task
+  - source: evaluation/generate_feedback_examples.py
+    product:
+      nb: products/notebooks/feedback_examples.ipynb
+      examples: products/data/feedback_examples.json
+    name: generate_feedback_examples
+    upstream:
+      - train_model
+      - extract_features
+    # This task depends on both train_model and extract_features tasks
+  
+  # Dashboard generation task
+  - source: visualization/create_dashboard.py
+    product:
+      nb: products/notebooks/dashboard.ipynb
+      dashboard: products/reports/dashboard.html
+    name: create_dashboard
+    upstream:
+      - evaluate_model
+      - generate_feedback_examples
+    # This task depends on evaluate_model and generate_feedback_examples tasks
+
+# Specify the products directory where all outputs will be stored
+meta:
+  product_default_path: products/
+  jupyter_kernel: python3
+
+# Specify any additional parameters for the pipeline
+params:
+  data_path: 'data/'
+  questions_file: 'sample_questions.json'
+  responses_file: 'sample_responses.json'
+  model_name: 'sentence-transformers/all-MiniLM-L6-v2'
+  evaluation_metrics:
+    - 'content_similarity'
+    - 'keyword_coverage'
+    - 'coherence'
+    - 'language_quality'
+    - 'structure'
+    - 'factual_correctness'
+  weights:
+    content_similarity: 0.30
+    keyword_coverage: 0.25
+    coherence: 0.15
+    language_quality: 0.10
+    structure: 0.10
+    factual_correctness: 0.10
