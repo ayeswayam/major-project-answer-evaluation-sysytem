@@ -1,0 +1,60 @@
+{
+  "responses": [
+    {
+      "id": 1,
+      "question_id": 1,
+      "student_id": "S001",
+      "response_text": "Inheritance is when one class takes on the attributes and methods of another class. The child class inherits from the parent class. This helps in code reuse. For example, if we have a parent class 'Vehicle', then classes like 'Car' and 'Bike' can inherit from it and have common properties like 'speed' and methods like 'accelerate'.",
+      "expert_score": 7,
+      "comments": "Good basic understanding of inheritance and includes an example, but lacks depth on polymorphism and the hierarchical relationship aspects."
+    },
+    {
+      "id": 2,
+      "question_id": 1,
+      "student_id": "S002",
+      "response_text": "Inheritance in OOP allows a new class to be based on an existing class. The new class (subclass) inherits attributes and behaviors from the existing class (superclass). This creates a parent-child relationship between classes. Inheritance supports code reusability and helps establish a hierarchical relationship. It also enables polymorphism, where objects of different classes can be treated as objects of a common superclass. Methods can be overridden in subclasses to provide specific implementations.",
+      "expert_score": 9,
+      "comments": "Comprehensive answer covering all key aspects of inheritance including code reusability, hierarchical structure, and polymorphism."
+    },
+    {
+      "id": 3,
+      "question_id": 2,
+      "student_id": "S001",
+      "response_text": "Preprocessing in machine learning involves cleaning and transforming data before feeding it to the model. It includes handling missing values, normalization, and feature scaling. This step is important because it affects the model's performance.",
+      "expert_score": 5,
+      "comments": "Basic answer that mentions some preprocessing steps but lacks detail on why these steps are important and how they impact model performance."
+    },
+    {
+      "id": 4,
+      "question_id": 2,
+      "student_id": "S002",
+      "response_text": "Preprocessing is essential in machine learning pipelines as it prepares raw data for modeling. It involves several key steps: data cleaning to handle missing values and outliers, normalization to bring features to a similar scale, feature encoding to convert categorical variables into numerical format, and feature selection to identify the most relevant variables. Proper preprocessing improves model performance by reducing noise, ensuring algorithm assumptions are met, and addressing issues like class imbalance. It also helps in dimensionality reduction, which reduces computational complexity and prevents overfitting. Overall, preprocessing directly influences the accuracy, efficiency, and generalization capability of machine learning models.",
+      "expert_score": 9,
+      "comments": "Excellent comprehensive answer covering multiple preprocessing techniques and explaining their importance in improving model performance."
+    },
+    {
+      "id": 5,
+      "question_id": 3,
+      "student_id": "S003",
+      "response_text": "Neural networks are made up of interconnected nodes or neurons that process information. They have input layers, hidden layers, and output layers. The neurons are connected by weights that get adjusted during training through backpropagation. They can learn patterns in data by minimizing an error function.",
+      "expert_score": 6,
+      "comments": "Covers basic structure and learning process but lacks details on activation functions and how information actually flows through the network."
+    },
+    {
+      "id": 6,
+      "question_id": 4,
+      "student_id": "S004",
+      "response_text": "Ethical considerations in AI include problems of bias, privacy, and transparency. AI systems might discriminate against certain groups if trained on biased data. They also collect a lot of personal data, which raises privacy concerns. Many AI systems are black boxes, making it hard to understand how they make decisions.",
+      "expert_score": 5,
+      "comments": "Mentions key ethical concerns but doesn't explore them in depth or discuss potential solutions or broader societal impacts."
+    },
+    {
+      "id": 7,
+      "question_id": 5,
+      "student_id": "S005",
+      "response_text": "Big O notation is used to analyze algorithm efficiency by describing how the runtime or space requirements grow as the input size increases. Common complexities include O(1) for constant time, O(n) for linear time, O(n²) for quadratic time, and O(log n) for logarithmic time algorithms. It helps programmers make informed decisions about algorithm selection based on performance requirements.",
+      "expert_score": 7,
+      "comments": "Good overview of Big O notation and common complexity classes, but could provide more specific examples of algorithms for each complexity class."
+    }
+  ]
+}
